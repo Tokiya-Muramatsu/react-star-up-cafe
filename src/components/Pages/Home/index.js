@@ -7,9 +7,7 @@ import Menu from "./Menu";
 
 
 function index() {
-
-
-
+  
   return (
     <div>
       <main>

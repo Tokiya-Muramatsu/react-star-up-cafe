@@ -1,5 +1,4 @@
 import React from "react";
-import Logo from "../img/coffe-logo.png";
 import { Link } from 'react-router-dom';
 import "./css/Header.css";
 
@@ -41,7 +40,7 @@ function Header() {
               </Link>
             </li>
             <li className="grow text-center px-2.5 py-1">
-              <img src={Logo} alt="ロゴ" className="w-16" />
+              <img src="/img/coffe-logo.png" alt="ロゴ" className="w-16" />
             </li>
             <li className="grow text-center px-2.5 py-1">
               <Link to="/content">
