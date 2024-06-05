@@ -3,8 +3,9 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./components/Pages/Home";
 import About from "./components/Pages/About/About";
-import Content from "./components/Pages/Content/Content";
+import Content from "./components/Pages/Menu/Menu";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 
 function App() {
   return (

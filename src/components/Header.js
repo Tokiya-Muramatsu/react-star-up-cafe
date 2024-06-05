@@ -18,7 +18,7 @@ function Header() {
                   <Link to="/about">ABOUT</Link>
                 </li>
                 <li>
-                  <Link to="/content">CONTENT</Link>
+                  <Link to="/content">MENU</Link>
                 </li>
                 <li>
                   <a href="/">CONTACT</a>
@@ -46,7 +46,7 @@ function Header() {
             <li className="grow text-center px-2.5 py-1">
               <Link to="/content">
                 <i className="fa-solid fa-mug-saucer text-2xl"></i>
-                <span className="text-xs">CONTENT</span>
+                <span className="text-xs">MENU</span>
               </Link>
             </li>
             <li className="grow text-center px-2.5 py-1">
