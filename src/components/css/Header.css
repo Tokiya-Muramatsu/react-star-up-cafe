@@ -1,0 +1,6 @@
+.header {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1); /* 下部にボックスシャドウを追加 */
+}
+.nav-ul {
+    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.1); /* トップの部分にボックスシャドーを追加 */
+}
