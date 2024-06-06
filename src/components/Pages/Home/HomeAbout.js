@@ -7,7 +7,7 @@ function HomeAbout() {
       <div className="w-9/12 m-auto max-md:w-11/12">
         <div>
           <h2 className="text-4xl text-center my-8">
-            <span>About</span>
+            <span>ABOUT</span>
           </h2>
         </div>
 

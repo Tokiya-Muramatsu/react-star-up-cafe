@@ -4,6 +4,7 @@ import News from "./News";
 import HomeAbout from "./HomeAbout";
 import ReactSlider from "./Slider";
 import Menu from "./Menu";
+import Access from "./ShopAccess";
 
 
 function index() {
@@ -26,6 +27,9 @@ function index() {
 
         {/* メニュー */}
         <Menu />
+
+        {/* アクセス */}
+        <Access />
 
       </main>
     </div>

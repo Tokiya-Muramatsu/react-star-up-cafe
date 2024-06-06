@@ -1,0 +1,65 @@
+.shop {
+  padding: 24px 0px;
+  h2 {
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 24px;
+    span {
+      border-bottom: 2px solid #fff;
+    }
+  }
+  .access-wrap {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+
+    p {
+      font-size: 24px;
+    }
+    tr {
+      border-bottom: 1px solid #eee;
+    }
+    th,
+    td {
+      padding: 16px 0;
+      text-align: left;
+    }
+    th {
+      width: 30%;
+    }
+    td {
+      width: 80%;
+    }
+
+    iframe {
+      width: 560px;
+      height: 320px;
+    }
+
+    @media screen and (max-width: 640px) {
+      display: block;
+      margin: auto;
+
+      table {
+        margin: auto;
+      }
+      th,
+      td {
+        width: 100%;
+        display: block;
+      }
+      td {
+        padding-top: 0;
+      }
+      iframe {
+        padding-top: 32px;
+        margin: auto;
+        width: 400px;
+      }
+    }
+  }
+}
