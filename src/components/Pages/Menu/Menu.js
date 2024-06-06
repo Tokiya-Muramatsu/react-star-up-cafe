@@ -1,10 +1,10 @@
 import React from 'react'
 import './Menu.css';
 
-function Content() {
+function Menu() {
   return (
     <div className='min-h-screen'>Content</div>
   )
 }
 
-export default Content
+export default Menu

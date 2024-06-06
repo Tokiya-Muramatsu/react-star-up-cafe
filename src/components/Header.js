@@ -17,7 +17,7 @@ function Header() {
                   <Link to="/about">ABOUT</Link>
                 </li>
                 <li>
-                  <Link to="/content">MENU</Link>
+                  <Link to="/menu">MENU</Link>
                 </li>
                 <li>
                   <a href="/">CONTACT</a>
@@ -43,7 +43,7 @@ function Header() {
               <img src="/img/coffe-logo.png" alt="ロゴ" className="w-16" />
             </li>
             <li className="grow text-center px-2.5 py-1">
-              <Link to="/content">
+              <Link to="/menu">
                 <i className="fa-solid fa-mug-saucer text-2xl"></i>
                 <span className="text-xs">MENU</span>
               </Link>
