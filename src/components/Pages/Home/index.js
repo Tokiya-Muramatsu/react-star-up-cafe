@@ -13,7 +13,7 @@ function index() {
     <div>
       <main>
         <div className="">
-          <img src="/img/top-main.jpg" alt="" className="h-full" />
+          <img src="/img/top-main.jpg" alt="" className="w-full" />
         </div>
 
         {/* お知らせ */}
