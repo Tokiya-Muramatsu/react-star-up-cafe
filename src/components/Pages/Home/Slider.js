@@ -11,7 +11,7 @@ function ReactSlider() {
     slidesToScroll: 1,
     autoplay: true,
     speed: 2000,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 0,
     arrows: false,
     cssEase: "linear",
   };
