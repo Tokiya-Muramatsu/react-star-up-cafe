@@ -20,7 +20,7 @@ function Header() {
                   <Link to="/menu">MENU</Link>
                 </li>
                 <li>
-                  <a href="/">CONTACT</a>
+                  <a href="/contact">CONTACT</a>
                 </li>
               </ul>
             </nav>
