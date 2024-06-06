@@ -3,7 +3,7 @@ import "./css/Footer.css";
 
 function Footer() {
   return (
-    <div className="relative pb-16 min-h-screen box-border">
+    <div className="relative pb-20 box-border">
       <footer className="absolute bottom-0 bg-zinc-700 w-full h-20 text-center text-white max-md:h-40">
         <nav className="mt-2 max-md:mt-4">
           <ul className="flex justify-center gap-4">

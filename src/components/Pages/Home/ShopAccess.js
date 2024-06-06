@@ -12,9 +12,9 @@ function ShopAccess() {
         </div>
         <div className="access-wrap">
           <div>
-            <p>
+            <h3 className="text-2xl text-center">
               Star Up Cafe
-            </p>
+            </h3>
 
             <table>
               <tr>

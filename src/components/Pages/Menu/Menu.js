@@ -3,7 +3,7 @@ import './Menu.css';
 
 function Content() {
   return (
-    <div>Content</div>
+    <div className='min-h-screen'>Content</div>
   )
 }
 
