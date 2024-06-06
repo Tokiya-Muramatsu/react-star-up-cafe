@@ -21,42 +21,42 @@ function ReactSlider() {
       <Slider {...settings} className="h-52 mb-36 max-md:mb-12">
         <div className="px-1">
           <img
-            src="/img/cake-1284548_640.jpg"
+            src="/img/slider01.jpg"
             alt=""
             className="h-72 max-md:h-44"
           />
         </div>
         <div className="">
           <img
-            src="/img/ai-generated-8770644_640.png"
+            src="/img/slider02.png"
             alt=""
             className="h-72 max-md:h-44"
           />
         </div>
         <div className="px-1">
           <img
-            src="/img/cake-1850011_640.jpg"
+            src="/img/slider03.jpg"
             alt=""
             className="h-72 max-md:h-44"
           />
         </div>
         <div className="">
           <img
-            src="/img/coffee-2605196_640.jpg"
+            src="/img/slider04.jpg"
             alt=""
             className="h-72 max-md:h-44"
           />
         </div>
         <div className="px-1">
           <img
-            src="/img/cake-1971552_640.jpg"
+            src="/img/slider05.jpg"
             alt=""
             className="h-72 max-md:h-44"
           />
         </div>
         <div className="">
           <img
-            src="/img/coffee-563797_640.jpg"
+            src="/img/slider06.jpg"
             alt=""
             className="h-72 max-md:h-44"
           />
