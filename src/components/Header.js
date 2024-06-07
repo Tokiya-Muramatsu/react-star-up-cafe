@@ -30,28 +30,31 @@ function Header() {
             <li className="grow text-center px-2.5 py-1">
               <Link to="/">
                 <i className="fa-solid fa-house-chimney text-2xl"></i>
+                <br />
                 <span className="text-xs">HOME</span>
               </Link>
             </li>
             <li className="grow text-center px-2.5 py-1">
               <Link to="/about">
                 <i className="fa-solid fa-store text-2xl"></i>
+                <br />
                 <span className="text-xs">ABOUT</span>
               </Link>
             </li>
             <li className="grow text-center px-2.5 py-1">
-              <img src="/img/coffe-logo.png" alt="ロゴ" className="w-16" />
+              <img src="/img/coffe-logo.png" alt="ロゴ" className="w-16 m-auto" />
             </li>
             <li className="grow text-center px-2.5 py-1">
               <Link to="/menu">
                 <i className="fa-solid fa-mug-saucer text-2xl"></i>
+                <br />
                 <span className="text-xs">MENU</span>
               </Link>
             </li>
             <li className="grow text-center px-2.5 py-1">
               <Link to="/contact">
                 <i className="fa-solid fa-envelope text-2xl"></i>
-                
+                <br />
                 <span className="text-xs">CONTACT</span>
               </Link>
             </li>
