@@ -20,7 +20,7 @@ function Header() {
                   <Link to="/menu">MENU</Link>
                 </li>
                 <li>
-                  <a href="/contact">CONTACT</a>
+                  <a href="/recommend">My Recommend</a>
                 </li>
               </ul>
             </nav>
@@ -52,10 +52,10 @@ function Header() {
               </Link>
             </li>
             <li className="grow text-center px-2.5 py-1">
-              <Link to="/contact">
+              <Link to="/recommend">
                 <i className="fa-solid fa-envelope text-2xl"></i>
                 <br />
-                <span className="text-xs">CONTACT</span>
+                <span className="text-xs">My Recommend</span>
               </Link>
             </li>
           </ul>
