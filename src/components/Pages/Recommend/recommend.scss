@@ -1,0 +1,108 @@
+$base_color: #fff;
+$button_color: #af7a4c;
+
+.title h1{
+    text-align: center;
+    font-size: 24px;
+    color: $base_color;
+}
+.form {
+    width: 40%;
+    margin: auto;
+    padding: 16px 24px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    div {
+        margin-bottom: 8px;
+    }
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    input,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+        max-height: 150px;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: $button_color;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:hover {
+            background-color: darken($button_color, 10%);
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        width: 90%;
+    }
+}
+
+.recommend-show {
+    width: 50%;
+    margin: auto;
+    padding-bottom: 80px;
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+        margin: 24px 0;
+        color: $base_color;
+        font-weight: bold;
+
+        span {
+            border-bottom: 2px solid $base_color;
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      
+      table, th, td {
+        border: 1px solid #ddd; /* 境界線 */
+      }
+      
+      th, td {
+        padding: 8px; /* セルの余白 */
+        text-align: left;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #f2f2f2; /* 偶数行の背景色 */
+      }
+      
+      th {
+        background-color: #e95f28; /* ヘッダーの背景色 */
+        color: $base_color; /* ヘッダーの文字色 */
+      }
+      td {
+        color: $base_color;
+      }
+      
+    @media screen and (max-width: 640px) {
+        width: 90%;
+    }
+}
