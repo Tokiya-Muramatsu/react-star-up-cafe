@@ -13,10 +13,16 @@ function RecommendFormList() {
   const [content, setContent] = useState("");
   const [recommendError, setRecommendError] = useState("");
   const [recommend, setRecommend] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredRecommend, setFilteredRecommend] = useState([]);
 
   useEffect(() => {
-    db.recommends.toArray().then(recommends => setRecommend(recommends));
-  });
+    db.recommends.toArray().then(recommends => {
+      setRecommend(recommends);
+      setFilteredRecommend(recommends); // 初期表示用に全件セット
+    });
+  }, []);
+
 
   const handleAddRecommend = (e) => {
     e.preventDefault();
@@ -28,12 +34,28 @@ function RecommendFormList() {
     // データベース追加
     db.recommends.add({ item, content }).then(() => {
       // 追加後、indexDBからデータを読み込む
-      db.recommends.toArray().then(recommends => setRecommend(recommends));
+      db.recommends.toArray().then(recommends => {
+        setRecommend(recommends);
+        setFilteredRecommend(recommends); // 追加後、全件セット
+      });
     });
     setItem("");
     setContent("");
     setRecommendError("");
   };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchTerm) {
+      setFilteredRecommend(recommend.filter(r => 
+        r.item.toLowerCase().includes(searchTerm.toLowerCase()) || 
+        r.content.toLowerCase().includes(searchTerm.toLowerCase())
+      ));
+    } else {
+      setFilteredRecommend(recommend);
+    }
+  }
+
   return (
     <div>
       <form className="form" onSubmit={handleAddRecommend}>
@@ -79,6 +101,18 @@ function RecommendFormList() {
         </div>
       </form>
 
+      <div className="search-form">
+        <form onSubmit={handleSearch}>
+          <input
+            type="text"
+            placeholder="検索..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+          <button type="submit">検索</button>
+        </form>
+      </div>
+
       <div className="recommend-show">
         <div>
           <h2>
@@ -95,7 +129,7 @@ function RecommendFormList() {
               </tr>
             </thead>
             <tbody>
-              {recommend.map(recommend => (
+              {filteredRecommend.map(recommend => (
                 <tr key={recommend.id}>
                   <td>{recommend.item}</td>
                   <td>{recommend.content}</td>
