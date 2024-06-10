@@ -12,8 +12,8 @@ function Modal({ show, item, onClose, onConfirm }) {
       <div className="modal-overlay">
         <div className="modal">
             <p>この「{item}」を削除しますか？</p>
-            <button onClick={onConfirm}>削除</button>
-            <button onClick={onClose}>キャンセル</button>
+            <button onClick={onConfirm} className="delete">削除</button>
+            <button onClick={onClose} className="cancel">キャンセル</button>
         </div>
 
       </div>

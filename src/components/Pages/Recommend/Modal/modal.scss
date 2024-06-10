@@ -1,3 +1,17 @@
+@mixin button($back_color) {
+    margin: 10px;
+    padding: 3px 10px;
+    background-color: $back_color;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    &:hover {
+      background-color: darken($back_color, 10%);
+    }
+}
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -16,8 +30,12 @@
         text-align: center;
         width: 300px;
 
-        button {
-            margin: 10px;
+        .delete {
+            @include button(rgb(249, 104, 104));
+        }
+        .cancel {
+            @include button(#eee);
+            color: #333;
         }
     }
 }
