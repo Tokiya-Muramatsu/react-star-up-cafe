@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./recommend.scss";
 import Dexie from "dexie";
+import Modal from "./Modal/Modal";
 
 // データベース初期化
 const db = new Dexie('recommendDB');
@@ -15,6 +16,8 @@ function RecommendFormList() {
   const [recommend, setRecommend] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredRecommend, setFilteredRecommend] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const [itemToDelete, setItemToDelete] = useState(null);
 
   useEffect(() => {
     db.recommends.toArray().then(recommends => {
@@ -44,6 +47,16 @@ function RecommendFormList() {
     setRecommendError("");
   };
 
+  const handleDeleteRecommend = (id) => {
+    db.recommends.delete(id).then(() => {
+      db.recommends.toArray().then(recommends => {
+        setRecommend(recommends);
+        setFilteredRecommend(recommends);
+      });
+    });
+    closeModal();
+  };
+
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchTerm) {
@@ -54,6 +67,20 @@ function RecommendFormList() {
     } else {
       setFilteredRecommend(recommend);
     }
+  }
+
+  const openModal = (recommend) => {
+    setItemToDelete(recommend);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setItemToDelete(null);
+    setShowModal(false);
+  };
+
+  const confirmDelete = () => {
+    handleDeleteRecommend(itemToDelete.id);
   }
 
   return (
@@ -125,7 +152,7 @@ function RecommendFormList() {
           <table>
             <thead>
               <tr>
-                <th>商品名</th>
+                <th>商品</th>
                 <th>内容</th>
               </tr>
             </thead>
@@ -134,12 +161,23 @@ function RecommendFormList() {
                 <tr key={recommend.id}>
                   <td>{recommend.item}</td>
                   <td>{recommend.content}</td>
+                  <td>
+                    <button onClick={() => openModal(recommend)}>削除</button>
+                  </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
       </div>
+
+      <Modal
+       show={showModal}
+       item={itemToDelete?.item}
+       onClose={closeModal}
+       onConfirm={confirmDelete}
+       />
+
     </div>
   );
 }
