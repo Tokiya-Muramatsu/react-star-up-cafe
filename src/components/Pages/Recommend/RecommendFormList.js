@@ -110,6 +110,7 @@ function RecommendFormList() {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
           <button type="submit">検索</button>
+          <a href="recommend">戻る</a>
         </form>
       </div>
 
