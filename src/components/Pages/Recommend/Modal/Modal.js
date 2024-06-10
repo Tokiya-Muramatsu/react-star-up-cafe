@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import "./modal.scss";
 
 function Modal({ show, item, onClose, onConfirm }) {
@@ -18,5 +19,12 @@ function Modal({ show, item, onClose, onConfirm }) {
       </div>
   );
 }
+
+Modal.propTypes = {
+    show: PropTypes.bool.isRequired,
+    item:PropTypes.string.isRequired,
+    onClose: PropTypes.func.isRequired,
+    onConfirm: PropTypes.func.isRequired
+};
 
 export default Modal;
